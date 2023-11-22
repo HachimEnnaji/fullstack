@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow</title>
+    <style>
+        #esempio1, #esempio2, #esempio3{
+            width: 300px;
+            margin: 30px;
+            /* padding: 50px; */
+            border: 1px solid black;
+        }
+        #esempio1{ box-shadow: -15px 10px;}
+        #esempio2{ box-shadow: -15px 10px 5px red;}
+        #esempio3{
+            color: aliceblue;
+            background-image: url(https://images.unsplash.com/photo-1508361001413-7a9dca21d08a?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFsbG93ZWVufGVufDB8fDB8fHww);
+        }
+        img{
+            width: 300px;
+        }
+        img:hover{opacity: 0.5;}
+        .n1, .n2 , .n3, .n4{
+            background-color: green;
+            padding: 25px;
+            margin: 0;
+            width: 200px;
+        }
+        div.n1{ background: rgba(0, 128, 0, 0.6);}
+        div.n2{ opacity: 0.6;}
+        div.n3{ opacity: 0.8;}
+
+
+    </style>
+</head>
+<body>
+    <h2>Proprietà shadow</h2>
+    <div id="esempio1">un div con l'ombra. il primo valore rappresente lo scostamento orizzontale. il secondo valore quello verticale</div>
+    <div id="esempio2">
+        Un div con l'ombra colorata (quarto valore)e una sfocatura (terzo valore) (oltre allo scostamento orizzontale, verticale)
+    </div>
+    <h2>Background-image</h2>
+    <div id="esempio3"> </div>
+    <img src="../1°giorno/img/mia_prima_immagine.webp" alt="halloween">
+    <div class="n1">.</div>
+    <div class="n2"> media opacita</div>
+    <div class="n3">poca opacità</div>
+    <div class="n4">nessuna opacità</div>
+
+</body>
+</html>

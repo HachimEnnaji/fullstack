@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo file js</title>
+</head>
+<body>
+    <!-- Come inserie javascript in una pagina -->
+    <h2>Inserisco codice inline</h2>
+    <p>Posso inserire direttamente le istruzioni javaxscript in un elemnto HTML,
+        assegnandolo a un attributo che rappresenta un evento</p>
+        <button type="button" onclick="alert('ciao!')">Cliccami</button>
+        <!-- abbiamo assegnato all'attributo onclick dell'elemento del tag button la stringa alert('ciao!')
+        l'attributo onclick rappresenta l'evento del click sul pulsante del mouse
+    quindi in corrispondenza dell'evento viene analizzato il codice javascript assegnato in questo caso alert è una keyword che mostra un box con la scritta ciao! -->
+    <p>Altro approccio per inserire codice inline, ma è valido solo per i link</p>
+    <a href="javascript:alert('ciao!')">Cliccami</a>
+    <!-- 
+        In questo caso indichiamo al browser di interpretare il link come richiesta di esecuzione del codice javascript specificato (javascript:-> non apro il link Ma eseguo il codice)
+     -->
+     <h2>Inserire blocchi di codice</h2>
+     <p><strong>Pro</strong>: nel caso abbiamo poco javascript metto in relazione subito il codice da eseguire con un tag html</p>
+     <p><strong>Contro</strong>: nel caso il codice sia minimamente complesso(variabile,funzioni,oggetti) non risulta comodo</p>
+     <script>alert('ciao!')</script>
+     <!-- il parser html del browser esamina la pagina, riconosce il tag <script> e passa il contenuto all'engine js che lo esegue -->
+    <p><code>Tag head o tag body?</code> primo ordine di considerazione-> performance; secondo ordine di considerazioni-> che il tag su cui js interagisce sia già stato parsato(letto e quindi disponibile)
+    -> questo spiega perchè tante volte troviamo gli script in fondo alla pagina prima di <code>&lt;/body&gt;</code></p>
+    <h2>Inserisco javascript esterno</h2>
+    <p>Approccio piu consigliato. Consiste nel collegare a una pagina html uno script presente in un file esterno<br>
+        il <strong>grande</strong> vantaggio e la separazione tra struttura e la programmazione, tra cos'è un tag e cosa deve fare
+    </p>
+    <script src="js/script.js"></script>
+    <!-- uso il percorso relativo come sempre + collego prima di <code>&lt;/body&gt;</code> -->
+    <!-- <script src="https://www.server.com/js/codice.js"></script> -->
+    <!-- posso collegare un file esterno -->
+    
+<!-----------  Console ------------->
+<h2>Oggetto console</h2>
+<p>La console è uno strumento fondamentale per scrivere codice javascript (per qualsiasi linguaggio di programmazione)</p>
+<p>La console ci permette di controllare il flusso del nostro codice</p>
+<p>Spesso la console si usa proprio per tenere traccia dell'evoluzione del mio script o verificare dei valori</p>
+<p>per vedere la console tasto destro-> ispeziona-> console</p><code>&lt;/body&gt;</code>
+<script>
+    // console.log("ciao mondo");
+    var a = 'pippo';
+    console.log('a è uguale a '+a);<code>&lt;/body&gt;</code>
+</script>
+<h3>Var, let, const</h3>
+<p>var è la keyword usata da javascript per usare una variabile, var è accessibile in qualunque parte dello script</p>
+<p>let introdotta da Ecmascript6 è accessibile in un determinato amibito (scope) che è delimitato da un blocco di codice</p>
+<p>Un blocco di codice javascript è una serie di istruzioni delimitate da { .. blocco di codice}</p>
+<h4>const</h4>
+<p>Introdotte da Ecmascript6-> istruisce l'engine che il valore assegnato non è modificabile</p>
+<script>
+    const PIGRECO = 3.14; // garantisce l'utilizzo in sola lettura del valore
+    // ---- var pigreco = 3.14; -----
+     // modificabile. la prassi vuole che si scriva in maiuscolo un valore nonn modificabile.
+    // la keyword var invece garantisce l'accesso in scrittura e quindi di  sovrascivere i valori
+    const PI =  3.1424523652;
+    // PI = 3.14 // errore
+    // PI = PI + 10 // errore
+
+    var x = 10; // qui x è 10
+    {
+        const x= 2; // qui x è 2
+    }
+    // se richiamo x qui fuori sarà 10 ( perchè const come let valgono solo nel blocco di codice)
+    
+</script>
+</body>
+</html>

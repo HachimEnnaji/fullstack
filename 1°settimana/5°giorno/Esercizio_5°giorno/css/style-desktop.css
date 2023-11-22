@@ -1,0 +1,142 @@
+/* Your styles here */
+/* --------------------    HEADER   -------------------- */
+header div{
+    width: 100%;
+    background-color: black;
+    text-align: left;
+}
+header div img{
+padding: 0.8em 1em;
+height: 30px;
+}
+
+/* ---------------------------FORMATTAZIONE BODY + MAIN ARTICLE E HEADING---------------------------------- */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+}
+main{
+    margin: auto 0;
+    text-align: center;
+}
+article{
+    margin: auto;
+}
+h1, h2, h3, h4{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5px;
+    padding: 2em;
+    text-align: center;
+}
+p{
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+/* --------------------    FORMATTAZIONE SFONDO PRIMO BANNER CON SFONDO IMG   -------------------- */
+
+#banner{
+
+    padding:4em;
+    background-image: url(/5°giorno/Esercizio_5°giorno/images/banner.jpg);
+    background-position: center;
+    background-size: contain;
+}
+#banner p{
+    text-align: center;
+}
+
+/* --------------------    FORMATTAZIONE BOTTONE   -------------------- */
+button{
+    background-color: #f04c2f;
+    color: bisque;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
+/* --------------------    2NDO BANNER CON IMMAGINA FLOATED A SX E TESTO ALLINEATO A SINISTRA HO USATO DUE DIV UNO PER FOTO E L'ALTRO PER TESTO   -------------------- */
+#snippet{
+    margin: 25px;
+    padding: 25px;
+    float: left;
+    width: 30%;
+    border-radius: 100%;
+}
+#floating_text h3,p{
+    text-align: left;
+}
+#red_banner{
+    margin: 3em 0;
+    background-color: #e22d0e;
+    color: white;
+    padding: 1em;
+
+}
+
+
+/* --------------------    BANNER ROSSO    -------------------- */
+#warranty{
+   color: aliceblue;
+   font-size: 1em;
+}
+blockquote{
+    font-style: italic;
+    padding: 1em;
+}
+span{
+    display: block;
+    padding: 10px;
+}
+
+
+/* --------------------    ASIDE CON 3 DIV SULLA STESSA RIGA    -------------------- */
+aside>div{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    text-align: center;
+    border: #dee1e3 solid 1px;
+}
+aside div img{
+    width: 100%;
+}
+aside div p{
+    padding: 1em 2em;
+}
+
+/* --------------------    FOOTER    -------------------- */
+
+footer{
+    background-color: #25a2c3 ;
+}
+footer h2, footer span, footer p{
+    color: #c8e7f0;
+}
+footer h2{
+    color: white;
+    font-size: 30px;
+    padding: 1.8em;
+}
+hr{
+    width: 25%;
+    margin-bottom: 1em;
+}
+a{
+    color: #c8e7f0;
+}
+footer span{
+    padding-bottom: 3em;
+}
+address a, address p{
+    padding: 1em;
+    text-align: center;
+}

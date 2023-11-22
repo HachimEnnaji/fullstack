@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserire elementi nel DOM</title>
+    <style>
+        #myDIV {
+            background-color: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Inserire elementi nel DOM via javascript</h1>
+    <p>Creare un nuovo paragrafo p con del testo</p>
+    <div id="myDIV"></div>
+    <p>Cose che so</p>
+    <ul id="myList1">
+        <li>Css</li>
+        <li>Html</li>
+    </ul>
+    <p>Cose che non so</p>
+    <ul id="myList2">
+        <li>javascript</li>
+        <li>React</li>
+    </ul>
+    <ul id="myList">
+        <li>andare al bar</li>
+        <li>andare al concerto</li>
+    </ul>
+    
+    <button onclick="myFunction()">Sposta da sotto a sopra</button>
+    <button onclick="myFunctionWeekend()">è il week end</button>
+    <p id="demo">Clicco sul bottone per rimuovere questo paragrafo dal DOM</p>
+    <button onclick="rimuovi()">Rimuovi</button>
+    <script>
+        //Create element è l'istruzione che ci permette di creare un nuovo elemento
+        const paragrafo = document.createElement("p"); // creo un elemento, nel parametro dico che tipo di elemento è
+        paragrafo.innerText = "Questo è il mio nuovo paragrafo" // innerText inserisco dei testi semplici (senza formattazione)
+        // non è sufficiente creare l'elemento per vederlo a video devo anche usare un comando per inserirlo
+        //l'ho creato finora
+        document.body.appendChild(paragrafo); // appendChild dico di inserire il paragrafo in coda a <body>
+
+        // creo un tag e lo inserisco in un div
+        const paragrafodue = document.createElement("p");
+        paragrafodue.innerHTML = " Questo è il <b>super paragrafo <b>";
+        document.getElementById("myDIV").appendChild(paragrafodue);
+        //! con appendChild inserisco sempre il tag in fondo al contenitore
+        // posso anche creare e assegnare iil contenuto separatmaente
+
+        const btn= document.createElement("button");
+        btn.innerHTML= "Bottone ciao";
+        document.body.appendChild(btn);
+
+        //append Child
+        function myFunction(){
+            const node = document.getElementById("myList2").lastElementChild;
+            document.getElementById("myList1").appendChild(node);
+        }
+        //insert Before-> per inserire prima (e non in fondo come con appendChild)
+
+        const newNode = document.createElement("li"); // creo un <li>
+        const textNode = document.createTextNode("studiare javascript"); //aggiungo un nodo di testo
+       
+            newNode.appendChild(textNode); // appendo textNode al mio <li>
+                const list = document.getElementById("myList"); //inserisco prima di un child esistente
+            list.insertBefore(newNode, list.children[0]);
+
+            //replace Child
+            //uso replace
+            function myFunctionWeekend(){
+                //seleziono il primo el di una lista - entro nella lista ul -> mi faccio dare il primo children
+                const element = document.getElementById("myList").children[0]
+                //creo un nuovo testo
+                const sabato = document.createTextNode("vado al mare");
+                //sostituisco
+                element.replaceChild(sabato, element.childNodes[0]);
+            }
+
+            // Remove
+            //uso remove per rimuovere qualcosa dal DOM 
+            function rimuovi(){
+                const miodiv = document.getElementById("demo")
+                miodiv.remove();
+            }
+            //removeChild();
+    </script>
+</body>
+
+</html>

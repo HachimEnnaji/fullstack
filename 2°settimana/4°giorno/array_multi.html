@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multi</title>
+</head>
+
+<body>
+    <script>
+        let studentsData = [['Alessandro', 24], ['Alice', 23], ['Alessandro', 27]];
+        
+        //for each -> metodo degli array che permett di applicare un'azione a ciascun elemento -> forEach associa una funzione
+        studentsData.forEach((student) =>{
+            student.forEach((datas) =>{
+                console.log(datas);
+            });
+        });
+
+        //for
+        //fare un loop array multidimensionali
+        for (let i = 0; i < studentsData.length; i++) {
+            let innerArraylength = studentsData[i].length;
+            for(let studente = 0; studente < innerArraylength; studente++){
+                console.log(studentsData[i][studente]);
+            }
+         }
+    </script>
+
+</body>
+
+</html>

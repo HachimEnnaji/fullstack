@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni scope</title>
+</head>
+
+<body>
+    <p>Fino ECMAScript avevamo var come unico modo di dichiarare una variabile, poi let e const come estensioni</p>
+    <script>
+        var x = 10; // se dichiaro con var appartiene all'oggetto global window -> è accessibile globalmente
+    </script>
+    <p>Nelle funzioni javascript esiste uno scope (ambito) locale che è diverso da quello globale</p>
+    <script>
+        var x = "fuori";
+        function faiQualcosa() {
+            var x = "dentro";
+            console.log(x);
+        }
+        faiQualcosa();
+        console.log(x);
+
+        var x = "fuori";
+        function faiQualcosa() {
+            x = "dentro";
+            console.log(x);
+        }
+        faiQualcosa();
+        console.log();
+        //la variabile x avendo uno scope globale è accessibile anche all'interno della funzione -> il valore viene alterato
+        //le variabili dichiarate dentro le funizioni hanno uno scope locale e non sono accessibili dall'esterno
+        //var ha uno scope locale/globale se viene dichiarato dentro o fuori dalla funzione
+
+        // le parentesi {} racchiudono block scope, un blocco di codice a sè rispetto al codice globale
+        // -> una variabile dichiarata con var non ha bloc scope -> è accessibile anche all'esterno del blocco di codice
+        // -> una variabile dichiarata con let ha blocck scope -> è accessibile solo all'interno del blocco di codice
+
+
+        ////////esempio
+        // ....
+        // codice globale
+        //...
+        //blocco
+        { var x = 2; }
+        //x qui è disponibile
+        { let x = 2; }
+        // x qui non è disponibile
+
+        ///// esempio 2
+        var i = 0;
+        if (true) {
+            var i = 1;
+        }
+        console.log(i); //  1 ->i viene riscritto (è modificabile anche se fuori dal blocco)
+        let i = 0;
+        if (true) {
+            var i = 1;
+        }
+        console.log(i); //0 -> perchè la variabile i viene riassegnata solo dentro al blocco di if
+
+        //l'assegnamento fatto usando let è riferito solo al blocco di codice a cui let appartiene
+
+        ///// esempio 3
+        var x = 10;// x è 10
+        { var x = 2; } // x è 2
+        // anche qui x sarebbe 2(non c'è block scope la variabile x viene sovrascitta)
+        var x = 10;  //x è 10
+        {
+            let x = 2; // x è 2
+        }               //qui x è 10 -> x non viene sovrascitta per let ha block scope{}
+
+        //Ridichiarazione
+        //è consentito
+        var x = 2; //x è 2
+        var x= 3; // x è 3
+        // è consentito
+        let x=2;
+        {let x= 3} // è consentito in scope differente
+        {let x= 4} // è consentito in scope differente
+
+
+        //non è consentito
+        var x=2; //consentito
+        let x=3; //non consentito
+
+        {
+            var x = 4; // è consentito
+            let x= 5; // non è consentito
+        }
+
+        //! non ridichiare usando let nè nello scope globale ne in quello locale
+    </script>
+
+    <h2>Hoisting</h2>
+    <p>Comportamento in cui le funzioni(o le variabili) possono essere usate PRIMA della dichiarazione</p>
+    <p>posso fare hoisting con var ma non con let </p>
+    <script>
+        myName= "Federico"; // posso usare myName anche se lo dichiaro in seguito
+        var p = document.getElementById("demo");
+        var myName; // dichiarazione
+        
+        //esempio con le funzioni
+        //migliora la leggibilità -> apro il file e vedo cosa fa il codice 
+        resetPunteggio();
+        disegnaTabellone();
+        popolaTabellone();
+        avviaGioco();
+
+        function resetPunteggio(){
+            console.log("Sto resettando il punteggio")
+        }
+        function disegnaTabellone(){
+            console.log("Sto disegnando il punteggio")
+        }
+        function popolaTabellone(){
+            console.log("Sto popolando il punteggio")
+        }
+        function avviaGioco(){
+            console.log("Avvio il gioco")
+        }
+    </script>
+</body>
+
+</html>

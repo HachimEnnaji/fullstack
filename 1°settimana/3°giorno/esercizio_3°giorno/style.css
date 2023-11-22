@@ -1,0 +1,75 @@
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#logo_container{
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    width: 10%;
+    padding: auto;
+}
+.slogan_page{
+    color: rgb(33, 203, 203);
+    background-color: rgb(254, 246, 234);
+    height: 30px;
+    border-top: solid rgb(202, 132, 35) 2px;
+    border-radius: 5px;
+}
+.slogan_page p{
+    margin-top: 10px;
+    text-align: center;
+}
+.uppercase{
+    text-transform: uppercase;
+
+}
+figure img{
+    border-radius: 12px;
+}
+picture > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+figcaption{
+    text-align: center;
+    color: gray;
+}
+.correlated{
+
+    box-shadow: inset 5px 0 5px -5px #b4cf1a;
+    padding-left: 10px;
+}
+.span_color{
+    color: brown;
+    font-weight: bold;
+}
+a{
+    color: rgb(6, 150, 150);
+}
+main{
+    margin: auto 20%;
+
+}
+article {
+    margin: auto 5%;
+}
+article> header{
+    text-align: center;
+}
+hr{
+    border-color: rgb(37, 234, 234)
+}
+#left_article{
+    margin-left: 0;
+}
+li{
+    line-height: 30px;
+}
+.bold{
+    font-weight: bold;
+}
+.method > p{
+    margin-left: 30px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* overflow */
+        div.ex1, div.ex2, div.ex3, div.ex4{
+            background-color: aquamarine;
+            height: 110px;
+            width: 110px;
+        }
+        div.ex1{
+            overflow: auto;
+        }
+        div.ex2{
+            overflow: hidden;
+        }
+        div.ex3{
+            overflow: scroll;
+        }
+        div.ex4{
+            overflow: scroll;
+        }
+        p{
+            width: 120px;
+            border: 1px solid black;
+        }
+        .uno{
+            word-break: normal;
+        }
+        .due{word-break: keep-all;}
+        .tre{
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>Proprietà overflow</h1>
+    <h2>overflow scroll</h2>
+    <div class="ex1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat vero laborum harum ad adipisci voluptatibus recusandae, perspiciatis officia nostrum et cumque consequuntur qui non voluptates unde! Ut sapiente odio mollitia?</div>
+    <h2>Overflow hidden</h2>
+    <div class="ex2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat vero laborum harum ad adipisci voluptatibus recusandae, perspiciatis officia nostrum et cumque consequuntur qui non voluptates unde! Ut sapiente odio mollitia?
+    </div>
+    <h2>overflow:auto</h2>
+    <div class="ex3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat vero laborum harum ad adipisci voluptatibus recusandae, perspiciatis officia nostrum et cumque consequuntur qui non voluptates unde! Ut sapiente odio mollitia?</div>
+    <h2>overflow: visible</h2>
+    <div class="ex4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat vero laborum harum ad adipisci voluptatibus recusandae, perspiciatis officia nostrum et cumque consequuntur qui non voluptates unde! Ut sapiente odio mollitia?</div>
+    <h1>Word-break</h1>
+    <p class="uno">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+    <p class="due">Precipitevolissimevolmente è la parola-più-lunga dell'alfabeto-italiano</p>
+    <p class="tre">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+    
+</body>
+</html>

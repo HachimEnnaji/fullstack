@@ -1,0 +1,121 @@
+/* Your styles here */
+
+/* --------------------------  HEADER ------------------------- */
+header div{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+/* --------------------------  IMG LOGO HEADER ------------------------- */
+header div img{
+padding: 2em 1em;
+height: 50px;
+}
+/* --------------------------  FORMATTAZIONE BODY + MAIN UNICO CONTENITORE PRINCIPALE E TAG PRINCIPALI COME HEADING E P -------------------------*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+}
+
+main{
+    margin: auto 0;
+    text-align: center;
+}
+h1, h2, h3, h4{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5px;
+    padding: 2em;
+    text-align: center;
+}
+p{
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+
+/* --------------------------  FORMATTAZIONE SFONDO PRIMO BANNER------------------------- */
+#banner{
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: contain;
+}
+/* --------------------------  FORMATTAZIONE BOTTONE ------------------------- */
+button{
+    background-color: #f04c2f;
+    color: bisque;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+/* --------------------------  DIMENSIONI FOTO E ARROTONDAMENTO BORDI ------------------------- */
+img#snippet{
+    width: 75%;
+    border-radius: 100%;
+}
+
+/* --------------------------  FORMATTAZIONE BANNER ROSSO ------------------------- */
+#red_banner{
+    background-color: #e22d0e;
+    color: white;
+    padding: 1em;
+
+}
+#warranty{
+   color: aliceblue;
+   font-size: 1em;
+}
+blockquote{
+    font-style: italic;
+    padding: 1em;
+}
+span{
+    display: block;
+    padding: 10px;
+}
+
+/* --------------------------  FORMATTAZIONE ASIDE PER COMODITA CONTENITORE PADRE DI 3 DIV GENERICI ------------------------- */
+aside div{
+    margin: 1.5em;
+    border: #dee1e3 solid 1px;
+}
+aside div img{
+    width: 80%;
+}
+aside div p{
+    padding-bottom: 2em;
+}
+
+/* --------------------------  FORMATTAZIONE FOOTER ------------------------- */
+footer{
+    background-color: #25a2c3 ;
+}
+footer h2, footer span, footer p{
+    color: #c8e7f0;
+}
+footer h2{
+    color: white;
+    font-size: 30px;
+    padding: 1.8em;
+}
+hr{
+    width: 25%;
+    margin-bottom: 1em;
+}
+a{
+    color: #c8e7f0;
+}
+footer span{
+    padding-bottom: 3em;
+}
+address a, address p{
+    padding: 1em;
+
+}

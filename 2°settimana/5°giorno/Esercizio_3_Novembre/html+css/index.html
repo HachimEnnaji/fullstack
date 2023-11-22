@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <title>Amazon Homepage</title>
+</head>
+<!-- ho dovuto dare una classe font al body perchè presumo per la specificità non mi prendeva tag body oppure tag * l'id top serve solo per riportare l'anchor alla top page -->
+
+<body class="font" id="top">
+
+    <!-- ---------------HEADER--------------- -->
+
+    <header class="py-1">
+        <div class="bg-dark">
+            <img class="ml" src="assets/img/logo.png" alt="logo">
+        </div>
+        <!-- NAVBAR -->
+        <nav>
+            <ul class="ml">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Today's deals</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Registry</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Sell</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- -----------ARTICLE------------- -->
+
+    <article>
+        <p class="my-1 py-1 text-center bg-yellow"> Show All Holiday Gift Cards</p>
+        <div class="my-1 py-2  container container-img">
+            <p>
+            <h2 class="py-1 text-center text1 white-txt">Holiday Gift Guides </h2>
+            </p>
+            <p>
+            <h2 class="py-1 text-center text2 white-txt">Be a go-gifter </h2>
+            </p>
+        </div>
+        <div class="my-1 py-2 text2 bg-grey">
+            <span class="ml">Find the perfect gift <a class="link " href="#">Shop now</a></span>
+
+            <!-- -----------TABELLA INVECE DELL'INLINE BLOCK PER CENTRARE LE 4 IMG---------- -->
+
+            <div class="my-1 py-2 container2">
+                <table class="text-center table-first-td">
+                    <tbody>
+                        <tr>
+                            <td><img class="box-img table-first-td" src="assets/img/img_1.jpg" alt="Kindle"></td>
+                            <td><img class="box-img rest-td" src="assets/img/img_2.jpg" alt="Scrivania"></td>
+                            <td><img class="box-img rest-td" src="assets/img/img_3.jpg" alt="orologi"></td>
+                            <td><img class="box-img rest-td" src="assets/img/img_4.jpg" alt="animali domestici"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- primo banner con background VR -->
+        <div class="my-2 py-1 text-center bg-1 container3 std-img">
+        </div>
+        <!-- paragrafo con scritta sotto -->
+        <p class="py-1 text2 text-center">Play the gifting game <a class="link" href="#">Shop gaming</a></p> <br><br>
+        <!-- secondo banner con background scrivania con occhiali e cuffie -->
+        <div class="my-2 py-1 text-center container3 bg-2 std-img ">
+        </div>
+        <!-- paragrafo con la sua scritta sotto -->
+        <p class="py-1 text2 text-center ">The sound of cheer <a class="link" href="#">Shop audio &amp; Accessoires</a>
+        </p> <br><br>
+    </article>
+
+    <!-- ----------FOOTER------------ -->
+
+    <footer>
+        <div class="text2 text-center">
+            <a id="back" href="#top"><u>Back to top</u></a>
+        </div>
+        <div class="text-center bg-dark container">
+            <img class="img-logo" src="assets/img/logo.png" alt="Amazon logo">
+        </div>
+    </footer>
+</body>
+
+</html>

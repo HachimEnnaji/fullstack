@@ -1,0 +1,131 @@
+/* IMPOSTAZIONI GENERALI */
+h1{
+    font-size: 40px;
+}
+body{
+    background-image: url(../assets/sfondo.png);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin:auto;
+}
+/* HEADER */
+#logo{
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 1%, rgba(0,212,255,1) 100%);
+    color: antiquewhite;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 5px 5px 2px rgb(23, 22, 22);
+}
+table {
+    margin: 2em;
+}
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
+thead tr {
+    background-color: #3f6bca;
+    color: #ffffff;
+}
+th, td {
+    padding: 12px 15px;
+    /* vertical-align: top; */
+    text-align: center;
+}
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #3f6bca;
+}
+.nav{
+    color: antiquewhite;
+}
+#logo>h3:not(a){
+    padding: 12px;
+}
+#logo>img{
+    width: 20%;
+}
+/* MAIN */
+article{
+    background-color: aliceblue;
+    margin: 20px;
+    padding: 10px;
+    border: grey 1px solid;
+    text-align: center;
+}
+/* ELEMENTI NEL MAIN - ARTICLE */
+span{
+    color: rgb(148, 28, 177);
+}
+#author{
+    color: grey;
+    padding: 10px;
+    text-align: center;
+}
+/* TABELLE */
+li{
+    list-style: disc;
+    padding: 5px;
+    text-align: left;
+    margin-left: 8%;
+}
+ul, ol{
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+#video{
+    width: 100%;
+    border-radius: 20px;
+    padding:auto 0;
+    margin: 5% auto;
+    
+}
+/* FORM */
+#form{
+    height: 150px;
+    background-color: rgb(160, 158, 158);
+}
+#form>h3{
+    font-weight: bold;
+    padding: 3%;
+    font-size: larger;
+}
+#form>p{
+    padding-bottom: 5%;
+
+}
+button{
+    border-radius: 2px;
+    background-color: rgb(40, 40, 203);
+    color: aliceblue;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ELEMENTI NELL' SECTION */
+/* FOOTER */
+footer{
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 1%, rgb(17, 95, 110) 100%);
+    color: white;
+    height: 150px ;
+}
+footer>p{
+    padding:15px;
+    text-align: center;
+}
+.correlated{
+    height: 80px;
+    margin: 5%;
+    background-color: gray;
+    border-radius: 5px;
+}

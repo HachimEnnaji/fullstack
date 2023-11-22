@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--nel tag <head> metto le info ausiliarie (titolo della pagina)-->
+        <meta charset="utf-8">
+        <!--è un tag empty e a differenza di altri non chiude, qui passo il set di caratteri-->
+        
+        <meta name="description" content="Qui andrebbe la descrizione della mia pagina">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--larghezza contenuto uguale larghezza device e partenza dalla scala da 1-->
+        <!-- non esiste </meta>-->
+<title> La mia prima pagina web</title>
+</head>
+<body>
+    <!--
+        Questo e' un commento (non viene mostrato a video dall browser)
+        nel tag body metto tutti i tag che voglio che vengano parsati (mostrati a video)dal browser
+        (ovviamente per essere mostrati a video devono stare fuori dal commento)
+    -->
+    <h1>Titolo principale</h1>
+    <h2>Titolo principale</h2>
+    <h3>Titolo principale</h3>
+    <h4>Titolo principale</h4>
+    <h5>Titolo principale</h5>
+    <h6>Titolo principale</h6>
+    <!-- h sta per heading (intestazione)-->
+    <p>Anche il tag p che serve a formattare i paragrafi e' un tag di blocco</p>
+    <p>Infatti se metto un secondo paragrafo si posiziona a capo</p>
+    <!--liste ordered list ol and unordered list ul (tag annidati)-->
+    <ol> <!--ordered list-> lista ordinata-->
+        <li>primo elemento</li>
+        <li>secondo elemento</li>
+        <li>terzo elemento</li>
+    </ol>
+    <ul> <!--unordered list-->
+        <li> scrivere il codice in vs
+            <!--lista annidata con altra lista al suo interno-->
+            <ul type="square"> <!-- unordered list circle,disc, square-->
+                <li>aggiung i nuovi tag</li>
+                <li>metto i commenti per ricordarmi meglio</li>
+                <li> memorizzo, imparo e controllo il codice</li>
+            </ul> </li>
+        <li> salvare il file</li>
+        <li> scaricare il browseer e verificare gli aggiornamenti</li>
+    </ul>
+    <!--description list-->
+    <dl>
+        <dt>Html</dt> <!-- description term-->
+        <dd>Linguaggio di marcatura semantica</dd>
+        <dt>Css</dt>
+        <dd>Linguaggio di formattazione</dd>
+        <dt> Browser</dt>
+        <dd>Programma per la navigazione</dd>
+    </dl>
+    <address> tag semantico: qui ci sono info anagrafiche</address>
+    <blockquote cite="https://www.wikipedia.org">tag che racchiude citazioni con relativo riferimento</blockquote>
+    <!--caratteri speciali-->
+    <p>3 è &lt; di 4</p> <!--minore-->
+    <p>4 è &gt; di 3</p> <!--minore-->
+    <p>Html &amp; Css</p> <!--ampersend-->
+    <p>&quot; questo è il doppio apice</p>
+    <p>&apos; questo e' apice singolo</p>
+    <span>Inserire un testo</span>
+    <span>Inserire un altro testo </span>
+    <p>
+        In questo bel paragrafo metto <b>quattro parole in grassetto</b> a scopo estetico
+        Essiste anche un <strong>altro modo </strong>di fare grassetti. <br> Inoltre possiamo mettere una parola in <i>corsivo</i> per fini estetiici oppure perchè è un contenuto <em>importante</em>
+        Questi tag così descritti seguono le regole del w3c aggiornati al <del>2015</del> <ins>2023</ins>
+    </p>
+    <!--altri tag inline-->
+    <p>Questo è un paragrafo inserito in un tag <abbr title="hypertext markup language"> html</abbr>  grazie al tag <code>&lt;p&gt;</code>
+    Posso evidenziare contenuti grazie al tag <mark>mark</mark> <br> 
+    <p>Questo e un <pre>testo non formattato</pre> Posso indicare dei tasti della tastiera <kbd> Premere Ctrl</kbd> <samp>F5 per aggiornare</samp></p>
+    <hr><!--horizontal row è una riga orizzontale tag empty non ha chiusura-->
+    <p>Quando parleremo di javascript impareremo a usare le <var>variabili</var></p>
+    <p>questo è un <sup>apice</sup> e questo un <sub>pedice</sub></p>
+    <!--inserire immagine formati possibili: jpg/jpeg, png/apng, gif, svg, webp, AVIF-->
+    <img src="img/mia_prima_immagine.webp" alt="immagine html">
+    <!--inserire immg da sito internet-->
+    <img src="https://epicode.com/wp-content/uploads/2022/06/Progetto-senza-titolo-4.png" alt="progetto epicode">
+    <!--tag semantico-->
+    <figure>
+        <img src="img/mia_prima_immagine.webp" alt=" porzione di codice">
+        <figcaption>Didascalia: Foto di una porzione di codice html dal siito di epicode
+        </figcaption>
+    </figure>
+</p>
+
+  
+</body>
+</html>
