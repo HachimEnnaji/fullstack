@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container {
+  margin: 1em;
+  box-sizing: border-box;
+  max-width: 600px;
+  border: 1px solid black;
+  position: relative;
+}
+p {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+#first,
+#second,
+#third {
+  color: #678a9c;
+  position: absolute;
+  opacity: 0;
+}
+#first {
+  animation: dropUp 6s ease-out infinite;
+  animation-delay: 0s;
+}
+#second {
+  animation: dropUp 6s ease-out infinite;
+  animation-delay: 2s;
+}
+#third {
+  animation: dropUp 6s ease-out infinite;
+  animation-delay: 4s;
+}
+
+@keyframes dropUp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+    transform: translate(0%, 50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0%, 75%);
+  }
+}

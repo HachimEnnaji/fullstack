@@ -1,0 +1,256 @@
+/* font-family: 'Roboto', sans-serif;
+    font-family: 'Spectral', serif;    */
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+.disappear {
+  opacity: 0;
+  transition: 400ms;
+}
+header {
+  background-color: #ffc017;
+  margin-inline: 50px;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1em 0;
+  position: fixed;
+  background-color: #ffc017;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: 650ms;
+}
+.changeColorway {
+  background-color: white;
+  transition: 650ms;
+}
+ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+ul li a {
+  margin: 1em;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #191919;
+}
+nav ul li:last-child a {
+  background-color: black;
+  color: white;
+  border-radius: 80px;
+  padding: 12px 15px;
+}
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid black;
+}
+.heroText h1 {
+  font-family: "Spectral", serif;
+  font-size: 120px;
+  padding-block-start: 1em;
+}
+.heroText p {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin-block: 1em;
+}
+.heroText button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #191919;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 80px;
+  margin-block: 1em;
+  cursor: pointer;
+}
+article {
+  padding: 10em;
+}
+article h3 {
+  padding: 2rem 0 2rem 7em;
+  font-family: "Spectral", serif;
+  vertical-align: top;
+}
+h3 span {
+  vertical-align: middle;
+}
+
+.containerArticles {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 7em;
+  border-bottom: #d2d0d0 1px solid;
+}
+.allArticles {
+  display: flex;
+  width: 33%;
+  gap: 10px;
+  font-family: "Spectral", serif;
+}
+.allArticles .textArticle {
+  flex-grow: 1;
+}
+.sharedArticles {
+  display: flex;
+}
+article .containerArticles .allArticles span,
+.writers .date {
+  font-size: 25px;
+  color: #6b6b6b;
+}
+.textArticle p,
+.asidesArticles p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.textArticle p img,
+.asidesArticles p img {
+  border-radius: 50%;
+  height: 30px;
+  vertical-align: middle;
+}
+.textArticle h4 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1em;
+}
+.containerCorrelated {
+  display: flex;
+  font-family: "Spectral", serif;
+  margin-block: 3em;
+  padding-inline: 10em;
+  align-items: flex-start;
+}
+.asidesArticles {
+  display: flex;
+  flex-direction: column;
+  /* max-height: 200px; */
+  flex: 1.5;
+}
+.writersImg img {
+  max-height: 200px;
+  max-width: 230px;
+  vertical-align: middle;
+}
+.writers h2 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.writers h5 {
+  color: #6b6b6b;
+  padding-bottom: 0.5rem;
+}
+.tags {
+  flex: 1;
+  text-align: center;
+  padding-block-start: 10px;
+  position: sticky;
+  top: 62px;
+}
+.link {
+  border-bottom: #d2d0d0 1px solid;
+  margin-inline: 1.5em;
+  padding: 0.6em 0 1.5em 0;
+}
+.tags .link span {
+  border: #d2d0d0 1px solid;
+  border-radius: 2px;
+}
+.tags .link span,
+.help a {
+  padding: 2px;
+  margin: 0.5em;
+  line-height: 2;
+  white-space: nowrap;
+  color: #6b6b6b;
+  cursor: pointer;
+  text-decoration: none;
+}
+.date #grey {
+  background-color: rgb(235, 235, 235);
+  color: #6b6b6b;
+  border-radius: 80px;
+  padding-inline: 3px;
+}
+.date #grey svg {
+  vertical-align: middle;
+}
+.wrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .allArticles {
+    width: 50%;
+  }
+  article h3 {
+    padding: 2rem 0 2rem 3em;
+  }
+  .containerArticles {
+    padding-inline: 3em;
+  }
+  .containerCorrelated {
+    margin: 2em;
+    flex-direction: column-reverse;
+    padding-inline: unset;
+  }
+  .tags {
+    display: flex;
+    flex-direction: column;
+    position: unset;
+    top: unset;
+  }
+  .asidesArticles {
+    display: unset;
+    max-height: unset;
+  }
+  .wrapper {
+    margin: 2em;
+  }
+}
+@media screen and (max-width: 651px) {
+  .container {
+    justify-content: space-between;
+    padding-inline: 20px;
+  }
+  ul li:not(:last-child):not(:nth-last-child(2)) {
+    display: none;
+  }
+  div.heroSvg svg {
+    visibility: hidden;
+  }
+  .wrapper {
+    margin: 1em;
+  }
+  .asidesArticles {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+  }
+  .containerCorrelated {
+    margin: 2em;
+    flex-direction: column-reverse;
+    padding-inline: unset;
+  }
+  .allArticles {
+    width: 100%;
+  }
+}

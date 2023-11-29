@@ -1,0 +1,66 @@
+* {
+  font-family: "Indie Flower", cursive;
+  box-sizing: border-box;
+}
+body {
+  background-color: #666666;
+}
+p,
+h2 {
+  margin: 0;
+}
+#lavagna {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+}
+.task {
+  width: 150px;
+  height: 120px;
+  margin: 1em;
+  padding: 1em;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 5px 3px rgba(87, 86, 86, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.task:hover {
+  scale: 1.5;
+  z-index: 2;
+  transition: 400ms;
+  box-shadow: 3px 3px 10px 1px black;
+}
+.task:nth-child(3n + 3) {
+  background-color: #c0c1ea;
+  transform: rotate(354deg);
+  animation: dropItDown 1s linear;
+}
+.task:nth-child(4n),
+.task:nth-child(2) {
+  background-color: #c9f9ca;
+  transform: rotate(6deg);
+  animation: dropItDown 400ms ease-in;
+}
+.task:nth-child(odd):not(:nth-child(3)),
+.task:first-child {
+  background-color: #f8f8c6;
+  transform: rotate(357deg);
+  animation: dropItDown 700ms linear;
+}
+
+@keyframes dropItDown {
+  0% {
+    transform: perspective(100px) translateZ(300px);
+  }
+  50% {
+    transform: perspective(100px) translateZ(100px);
+  }
+  75% {
+    transform: perspective(100px) translateZ(50px);
+  }
+  100% {
+    transform: perspective(100px) translateZ(0px);
+  }
+}
